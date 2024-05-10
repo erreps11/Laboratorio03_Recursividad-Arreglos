@@ -15,7 +15,3 @@ static void ImprimirPares(int n, int limite)
 int inicio = 2;  
 int limite = 100;  
 ImprimirPares(inicio, limite);
-
-
-
-
