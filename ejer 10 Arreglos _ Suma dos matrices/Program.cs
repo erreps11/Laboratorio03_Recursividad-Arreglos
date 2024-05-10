@@ -9,14 +9,11 @@ int[,] matrizB = {
             { 10, 20 }
         };
 
-// Determinar las dimensiones máximas
 int maxFilas = Math.Max(matrizA.GetLength(0), matrizB.GetLength(0));
 int maxColumnas = Math.Max(matrizA.GetLength(1), matrizB.GetLength(1));
 
-// Crear una nueva matriz para la suma
 int[,] sumaMatrices = new int[maxFilas, maxColumnas];
 
-// Sumar las matrices extendiendo la matriz más pequeña con ceros
 for (int i = 0; i < maxFilas; i++)
 {
     for (int j = 0; j < maxColumnas; j++)
@@ -27,7 +24,6 @@ for (int i = 0; i < maxFilas; i++)
     }
 }
 
-// Imprimir la matriz resultante
 Console.WriteLine("Suma de las matrices:");
 for (int i = 0; i < sumaMatrices.GetLength(0); i++)
 {

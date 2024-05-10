@@ -4,25 +4,24 @@ static void ImprimirLinea(int inicio, int fin)
 {
     if (inicio > fin)
     {
-        return;  // Detiene la impresión cuando se ha llegado al final de la línea
+        return;  
     }
-    Console.Write(inicio + " ");  // Imprime el número actual y un espacio
-    ImprimirLinea(inicio + 1, fin);  // Recursión para el siguiente número en la misma línea
+    Console.Write(inicio + " ");  
+    ImprimirLinea(inicio + 1, fin);  
 }
 
 static void ImprimirPiramideInvertida(int nivelActual, int nivelesTotales)
 {
     if (nivelActual < 1)
     {
-        return;  // Condición de parada de la recursión cuando se alcanza el nivel superior
+        return;  
     }
-    // Imprime espacios para centrar los números (opcional)
     Console.Write(new string(' ', (nivelesTotales - nivelActual)));
-    ImprimirLinea(1, nivelActual);  // Llama a la función para imprimir los números de la línea
-    Console.WriteLine();  // Nueva línea después de terminar la línea actual
-    ImprimirPiramideInvertida(nivelActual - 1, nivelesTotales);  // Recursión para la siguiente línea de la pirámide
+    ImprimirLinea(1, nivelActual);  
+    Console.WriteLine();  
+    ImprimirPiramideInvertida(nivelActual - 1, nivelesTotales);  
 }
 
 Console.Write("Ingrese el número n para la altura de la pirámide invertida: ");
-int n = int.Parse(Console.ReadLine());  // Leer n del usuario
+int n = int.Parse(Console.ReadLine());  
 ImprimirPiramideInvertida(n, n);
